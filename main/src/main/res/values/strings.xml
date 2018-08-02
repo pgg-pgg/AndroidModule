@@ -1,0 +1,11 @@
+<resources>
+    <string name="main_app_name">main</string>
+
+    <string name="main_app_main">main组件</string>
+
+    <string name="main_app_exit_hint">再按一次退出程序</string>
+    <string name="main_title_activity_fragment_module">Fragment组件化</string>
+    <string name="main_title_home">新闻</string>
+    <string name="main_title_dashboard">美女</string>
+    <string name="main_title_notifications">预留</string>
+</resources>

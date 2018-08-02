@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/main_activity_vertical_margin"
+    android:paddingLeft="@dimen/main_activity_horizontal_margin"
+    android:paddingRight="@dimen/main_activity_horizontal_margin"
+    android:paddingTop="@dimen/main_activity_vertical_margin"
+    tools:context="pgg.main.MainActivity">
+
+
+    <Button
+        android:id="@+id/news_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新闻" />
+
+    <Button
+        android:id="@+id/girls_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="美女" />
+
+    <Button
+        android:id="@+id/fragment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment" />
+</LinearLayout>

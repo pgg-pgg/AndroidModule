@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    //Android Support
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:percent:$rootProject.supportLibraryVersion"
+    //网络请求相关
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:retrofit-mock:$rootProject.retrofitVersion"
+    compile "com.github.franmontiel:PersistentCookieJar:$rootProject.cookieVersion"
+    //稳定的
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    compile "com.orhanobut:logger:$rootProject.loggerVersion"
+    compile "org.greenrobot:eventbus:$rootProject.eventbusVersion"
+    compile "com.google.code.gson:gson:$rootProject.gsonVersion"
+    compile "com.github.chrisbanes:PhotoView:$rootProject.photoViewVersion"
+
+    compile "com.jude:easyrecyclerview:$rootProject.easyRecyclerVersion"
+    compile "com.github.GrenderG:Toasty:$rootProject.toastyVersion"
+
+    //router
+    compile 'com.alibaba:arouter-api:1.2.1.1'
+}
